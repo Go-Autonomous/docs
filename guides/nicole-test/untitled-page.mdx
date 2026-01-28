@@ -1,0 +1,123 @@
+---
+title: "Axon: Intent Control Cente"
+description: "Master your AI's logic through visual hierarchy, custom training, and intent management"
+---
+
+---
+
+## Executive Summary
+
+**Axon** is the central command center for our intent model. It is a fully interactive **Intent Control Center** that empowers you to visualize your intent hierarchy via a tree structure, customize terminology, manage training data, and reorganize categories.
+
+By allowing you to deactivate unused standard intents and build custom ones, Axon ensures the AI model perfectly mirrors your specific business reality.
+
+---
+
+## Key Capabilities
+
+<CardGroup cols={2}>
+  <Card title="Structural Control" icon="sitemap">
+    Organize intents to match your internal mental models rather than a generic standard.
+  </Card>
+  <Card title="Self-Serve Training" icon="brain">
+    Link real emails from Workstation to teach the model exactly what an intent looks like.
+  </Card>
+  <Card title="Noise Reduction" icon="filter">
+    Bulk-deactivate irrelevant standard intents to declutter your workspace.
+  </Card>
+  <Card title="Instant Learning" icon="bolt">
+    Updates to intents are instantly reflected across your automated flows.
+  </Card>
+</CardGroup>
+
+---
+
+## 1. The Active Intent Tree
+
+The **Main View** allows you to manage your intent hierarchy in real-time.
+
+### Managing Hierarchy
+
+- **Visual Tree:** Intents are displayed in a nested structure (Category \> Subcategory \> Intent).
+- **Drag & Drop:** Move intents and sub-categories between parents.
+  - _Note:_ Dragging an intent to a closed folder will automatically expand it.
+- **Multi-Select:** Use checkboxes to move or deactivate multiple items at once.
+
+### Editor Mode
+
+When you drag an intent, edit a name, or add a category, the system enters **Editor Mode**.
+
+- **Save Changes:** Commits all adjustments and updates the "Last Edited" metadata.
+- **Discard:** Reverts the tree to its previous state.
+
+<Warning>
+  **Validation Error:** You cannot rename an intent to match an existing name. If a duplicate is detected, the system will prevent the save.
+</Warning>
+
+---
+
+## 2. Adding & Deactivating Content
+
+### Adding Categories & Intents
+
+Hover your mouse between existing items to trigger the "Add" line:
+
+1. **Add Category/Subcategory:** Opens a modal for naming.
+2. **Add New Intent:** Opens the **Intent Builder**.
+
+### Deactivating vs. Deleting
+
+| Action         | Item Type            | Result                                                       |
+| :------------- | :------------------- | :----------------------------------------------------------- |
+| **Deactivate** | Intent               | Moved to Deactivated Page; can be restored later.            |
+| **Delete**     | Category/Subcategory | **Permanent.** Can only be deleted if no intents are inside. |
+
+<Note>
+  When deactivating a category, all nested intents move to the "Deactivated" list, but the category structure itself is deleted.
+</Note>
+
+---
+
+## 3. Intent Builder & Training
+
+To refine how the AI identifies an intent, click on an intent name to open the Editor.
+
+### Metadata & Description
+
+- **Name:** The user-facing label seen in Flow and Workstation.
+- **Description:** The actual prompt used by the AI model to understand the intent.
+
+### Linking Training Data
+
+Use the **"Link from Workstation"** button to:
+
+1. Search and filter real subject lines.
+2. Select real email examples to use as training data.
+3. The system automatically deduplicates identical examples.
+
+---
+
+## 4. Deactivated Intents
+
+If you need to restore a standard or custom intent, navigate to the **Deactivated Intents** tab.
+
+- **View Metadata:** See the original location and date of deactivation.
+- **Reactivate:** Click the reactivate button. You will be prompted to select a **mandatory** Category and Subcategory for the intent's new home.
+
+---
+
+## Logic & State Management
+
+- **Historical Data:** Deleting a custom intent or deactivating a standard one does **not** change historical labels on old emails. It only affects new incoming traffic.
+- **Unsaved Changes:** A warning modal will appear if you attempt to leave the page with pending edits in Editor Mode.
+- **Role Permissions:** "Annotator Intents" are hidden from standard Admin/Manager views to keep the interface clean.
+
+---
+
+## Quick Start: Creating your first Intent
+
+1. Navigate to the **Active Intent Tree**.
+2. Hover in the subcategory where you want the intent and click **"Add New Intent"**.
+3. Enter the **Name** and **Training Prompt**.
+4. (Optional) Click **"Browse Emails"** to pull 3-5 examples from Workstation.
+5. Click **Save** in the modal, then **Save Changes** on the main dashboard.
