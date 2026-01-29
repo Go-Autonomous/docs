@@ -1,0 +1,56 @@
+---
+title: "Eco Logistics - Account Resolution"
+description: "How Go Autonomous AI processes orders and ERP integration for Eco Logistics Corp."
+icon: "truck"
+---
+
+## Overview
+
+This document outlines the specific configuration for **Eco Logistics Corp** (Dummy Account) using the Go Autonomous AI engine to automate order creation from email attachments.
+
+<Info>
+  **Test Goal:** Evaluate how easy it is to read "Account Resolution" logic in a professional format.
+</Info>
+
+## Order Extraction Process
+
+Our AI extracts order details directly from incoming communications.
+
+### 1. Data Sources
+
+The AI monitors the following for Eco Logistics Corp:
+
+- **Email Body:** Primary extraction for urgent "Rush" flags.
+- **PDF Attachments:** Standard Purchase Orders (PO) containing line items.
+
+### 2. Account Resolution Logic
+
+When a new email arrives, the AI performs **Account Resolution** to match data to your ERP:
+
+| Extracted Field  | Resolution Method               | ERP Field      |
+| :--------------- | :------------------------------ | :------------- |
+| Customer ID      | Regex Match from Header         | `CUST_REF_ID`  |
+| Shipping Address | Fuzzy Match against Master Data | `SHIP_TO_CODE` |
+| Item Numbers     | Semantic Lookup (AI-driven)     | `SKU_PRIMARY`  |
+
+<Steps>
+  ### Step 1: Extraction
+
+  The AI identifies a PDF named `PO_12345.pdf`. It uses OCR to pull the table of items.
+
+  ### Step 2: Resolution
+
+  The AI matches "Glo-Logistics" in the email to the ERP entity `GLC_9901`.
+
+  ### Step 3: Integration
+
+  The system pushes a `POST` request to the ERP endpoint to create a draft order.
+</Steps>
+
+## ERP Integration Status
+
+<Check>
+  Connected to SAP S/4HANA (UAT Environment)
+</Check>
+
+can you make a summary to a new ticket to revisit this about timeout? cos i will clone this ticket to change request

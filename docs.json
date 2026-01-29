@@ -28,6 +28,12 @@
         "tab": "Guides",
         "groups": [
           {
+            "group": "Eco Test",
+            "pages": [
+              "guides/eco-test/untitled-page"
+            ]
+          },
+          {
             "group": "Nicole Test",
             "pages": [
               "guides/nicole-test/untitled-page",
