@@ -26,22 +26,28 @@
     "tabs": [
       {
         "tab": "Guides",
-        "groups": [
+        "versions": [
           {
-            "group": "Eco Test",
+            "version": "Ale's Test",
+            "pages": [
+              "guides/ales-test/file"
+            ]
+          },
+          {
+            "version": "Eco Test",
             "pages": [
               "guides/eco-test/untitled-page"
             ]
           },
           {
-            "group": "Nicole Test",
+            "version": "Nicole Test",
             "pages": [
               "guides/nicole-test/untitled-page",
               "guides/nicole-test/this-is-a-question"
             ]
           },
           {
-            "group": "Getting started",
+            "version": "Getting started",
             "pages": [
               "index",
               "quickstart",
@@ -49,14 +55,14 @@
             ]
           },
           {
-            "group": "Customization",
+            "version": "Customization",
             "pages": [
               "essentials/settings",
               "essentials/navigation"
             ]
           },
           {
-            "group": "Writing content",
+            "version": "Writing content",
             "pages": [
               "essentials/markdown",
               "essentials/code",
@@ -66,7 +72,7 @@
             ]
           },
           {
-            "group": "AI tools",
+            "version": "AI tools",
             "pages": [
               "ai-tools/cursor",
               "ai-tools/claude-code",
